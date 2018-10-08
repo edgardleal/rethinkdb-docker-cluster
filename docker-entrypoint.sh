@@ -23,6 +23,8 @@ else
 		if [ -n "$resolved_result" ]; then
 			run_cmd="${run_cmd} -j ${resolved_result}:29015"
 		fi
+	else
+	        run_cmd="${run_cmd} -j rethinkdb:29015"
 	fi
 	exec $run_cmd
 fi
