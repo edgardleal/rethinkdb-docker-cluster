@@ -26,7 +26,7 @@ else
 		if [ -n "$resolved_result" ]; then
 			run_cmd="${run_cmd} -j ${resolved_result}:29015"
 		else
-		        echo "Can`t resolve join host: $JOIN"
+		        echo "Can't resolve join host: $JOIN"
 		fi
 	else
 	        run_cmd="${run_cmd} -j rethinkdb:29015"
