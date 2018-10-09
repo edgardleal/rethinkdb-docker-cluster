@@ -12,7 +12,7 @@ else
     prefix="$(echo $canonical_address | sed 's/^\(.*\..*\..*\)\..*$/\1/g')"
     run_rmd="${run_rmd} --canonical-address ${prefix}.$(($last_digit - 1)):29015"
             
-    echo "Using canonical address: $canonical_address"
+    echo "Using canonical address: $canonical_address & ${prefix}.$(($last_digit - 1))"
     if [ -n "$JOIN" ]; then
         echo "Join parameter: $JOIN"
         join_resolved=$(eval "getent hosts ${JOIN}" | awk '{ print $1}')
