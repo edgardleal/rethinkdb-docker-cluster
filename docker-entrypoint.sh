@@ -29,7 +29,7 @@ else
 		        echo "Can't resolve join host: $JOIN"
 		fi
 	else
-	        run_cmd="${run_cmd} -j rethinkdb:29015"
+	        echo "JOIN variable not provided !"
 	fi
 	exec $run_cmd
 fi
