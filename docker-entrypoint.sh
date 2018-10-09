@@ -8,7 +8,8 @@ else
 	run_cmd="/usr/bin/rethinkdb --bind all"
 	run_cmd="${run_cmd} -d /data"
 	run_cmd="${run_cmd} --canonical-address ${canonical_address}:29015"
-	if [ -n "$JOIN" ]; then
+	echo "Using canonical address: $canonical_address"
+	if [ -n "$JOIN" ]; then`
 	        echo "Join parameter: $JOIN"
 		join_resolved=$(eval "getent hosts ${JOIN}" | awk '{ print $1}')
 		# ensure that we're not trying to join ourselves
